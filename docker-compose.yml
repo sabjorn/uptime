@@ -1,0 +1,13 @@
+version: '3'
+services:
+  api_monitor:
+    build: .
+    command: >
+      python ./uptime.py
+      --url ${URL} 
+      --username ${USERNAME}
+      --password ${PASSWORD}
+      --mailgun_api_key ${MAILGUN_API_KEY} 
+      --mailgun_domain ${MAILGUN_DOMAIN}
+      --email_to ${EMAIL_TO} 
+      --sleep ${SLEEP}
